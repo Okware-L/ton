@@ -5,7 +5,7 @@ import { TonConnectUIProvider } from "@tonconnect/ui-react";
 
 // this manifest is used temporarily for development purposes
 const manifestUrl =
-  "https://github.com/Okware-L/ton/blob/master/public/tonconnect-manifest.json";
+  "https://Okware-L.github.io/ton/blob/master/public/tonconnect-manifest.json";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <TonConnectUIProvider manifestUrl={manifestUrl}>
