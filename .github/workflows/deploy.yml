@@ -18,14 +18,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 16
-          cache: "yarn" # Enable npm cache
 
       - name: Install dependencies
-        run: yarn ci # Using npm ci instead of npm install for cleaner installs
+        uses: bahmutov/yarn-add@v4
 
       - name: Build project
-        run: |
-          yarn build || (echo "Build failed" && exit 1)
+        run: yarn run build
 
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v4
